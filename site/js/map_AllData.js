@@ -1,10 +1,10 @@
 //sk.eyJ1Ijoia2VlbGJuIiwiYSI6ImNsZ2JzM3RnczF1MXgzbG41MGtvaHZmdWUifQ.x06_5V6rM6MuEKg13RIuBw
+// import { pred_nhoods } from "../data/prediction_nhoods";
 
 let app = {
     currentAddress: null,
     currentSpread: null,
   };
-
 
 const zoomThreshold = 4;
 
@@ -28,6 +28,32 @@ L.vectorGrid.protobuf("https://api.mapbox.com/v4/keelbn.test01/{z}/{x}/{y}.vecto
     token: "sk.eyJ1Ijoia2VlbGJuIiwiYSI6ImNsZ2JzM3RnczF1MXgzbG41MGtvaHZmdWUifQ.x06_5V6rM6MuEKg13RIuBw"
 }).addTo(map);
 
+// // neighborhood
+// L.vectorGrid.protobuf("https://storage.googleapis.com/fire_recovery_data_lake/tiles/{z}/{x}/{y}.pbf", {
+//     vectorTileLayerStyles: {
+//         test01: {
+//             weight:0,
+//             fillColor: '#9bc2c4',
+//             fillOpacity: 1,
+//             fill: true,
+//             radius: 2
+//         }
+//     }
+// }).addTo(map);
+
+
+// // block group
+// L.vectorGrid.protobuf("https://storage.googleapis.com/fire_recovery_data_lake/tiles/{z}/{x}/{y}.pbf", {
+//     vectorTileLayerStyles: {
+//         test01: {
+//             weight:0,
+//             fillColor: '#9bc2c4',
+//             fillOpacity: 1,
+//             fill: true,
+//             radius: 2
+//         }
+//     }
+// }).addTo(map);
 
 
 // let voteList = document.querySelector('#voterList');

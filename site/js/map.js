@@ -9,6 +9,19 @@ function initMap() {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+    // address dots
+    L.vectorGrid.protobuf("https://storage.googleapis.com/fire_recovery_data_lake/tiles/{z}/{x}/{y}.pbf", {
+        vectorTileLayerStyles: {
+            test01: {
+                weight:0,
+                fillColor: '#7B230B',
+                fillOpacity: 1,
+                fill: true,
+                radius: 0.5
+            }
+        }
+    }).addTo(map);
+
     return map;
 }
 
