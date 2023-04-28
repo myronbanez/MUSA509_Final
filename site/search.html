@@ -38,36 +38,27 @@
     <div id="map"></div>
 
     <div class="search-container" id="searchContainer">
-        <!-- <h4 class="control-title">Explore Fire Predictions</h4> -->
-        <!-- <div class="control">
-            <label for="spread-select">Select Fire Spread:</label>
-            <div class="dropdown">
-                <select name="spread" id="spread-select">
-                    <option value="1">1 - Object of Origin Only</option>
-                    <option value="2">2 - Spread to Room</option>
-                    <option value="3">3 - Spread to Floor</option>
-                    <option value="4">4 - Spread to Multiple Floors</option>
-                    <option value="5">5 - Spread to Other Buildings</option>  
-                </select>
-            </div>
-        </div> -->
-
         <div class="control">
-            <label for="spread-select">Select outcome and severity level to visualize by broader geographies:</label>
+            <h4 class="control-title">Spatial Summary</h4>
+            <label for="spread-select">Geography of interest:</label>
+            <label><input type="checkbox" class="nhood-checkbox" value="1"></a> Neighborhood</label>
+            <label><input type="checkbox" class="bg-checkbox" value="1"></a> Block Group</label>
+        </br>
             <div class="">
-                <h6><label>VACANCY</label></br></h6>
+                <label for="spread-select">Outcome and severity level:</label></br>
+                <label>Vacancy</label></br>
                 <label><input type="checkbox" class="vacant-checkbox" value="1"></a> 1</label>
                 <label><input type="checkbox" class="vacant-checkbox2" value="1"></a> 2</label>
                 <label><input type="checkbox" class="vacant-checkbox3" value="1"></a> 3</label>
                 <label><input type="checkbox" class="vacant-checkbox4" value="1"></a> 4</label>
                 <label><input type="checkbox" class="vacant-checkbox5" value="1"></a> 5</label></br>
-                <h6><label>REPAIR</label></br></h6>
+                <label>Repair</label></br>
                 <label><input type="checkbox" class="permit-checkbox" value="1"></a> 1</label>
                 <label><input type="checkbox" class="permit-checkbox2" value="1"></a> 2</label>
                 <label><input type="checkbox" class="permit-checkbox3" value="1"></a> 3</label>
                 <label><input type="checkbox" class="permit-checkbox4" value="1"></a> 4</label>
                 <label><input type="checkbox" class="permit-checkbox5" value="1"></a> 5</label></br>
-                <h6><label>SALE</label></br></h6>
+                <label>Sale</label></br>
                 <label><input type="checkbox" class="transfer-checkbox" value="#"></a> 1</label>
                 <label><input type="checkbox" class="transfer-checkbox2" value="#"></a> 2</label>
                 <label><input type="checkbox" class="transfer-checkbox3" value="#"></a> 3</label>
