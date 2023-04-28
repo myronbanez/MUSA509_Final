@@ -1,4 +1,4 @@
-export const pred_bg = {
+export default {
   "type": ["FeatureCollection"],
   "name": ["prediction_blockgroup"],
   "crs": {

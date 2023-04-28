@@ -1,5 +1,4 @@
 //sk.eyJ1Ijoia2VlbGJuIiwiYSI6ImNsZ2JzM3RnczF1MXgzbG41MGtvaHZmdWUifQ.x06_5V6rM6MuEKg13RIuBw
-// import { pred_nhoods } from "../data/prediction_nhoods";
 
 let app = {
     currentAddress: null,

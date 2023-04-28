@@ -1,4 +1,4 @@
-export const pred_nhoods = {
+export default {
   "type": ["FeatureCollection"],
   "name": ["prediction_nhoods"],
   "crs": {

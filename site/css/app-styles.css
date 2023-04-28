@@ -26,7 +26,7 @@
     z-index: 1;
     width: 240px;
     position:absolute;
-    top: 80px;
+    top: 350px;
     left: 20px;
 }
 
@@ -45,7 +45,7 @@
   z-index: 1;
   width: 240px;
   position:absolute;
-  top: 350px;
+  top: 80px;
   left: 20px;
 }
 
@@ -178,9 +178,9 @@
     margin-bottom: 20px;
 }
 
-hr {
+/* hr {
 
-}
+} */
 
 
 #spread-select{
@@ -216,6 +216,32 @@ hr {
   font-size: 1em;
   margin-bottom: 1.3em  !important;
 }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.legend h3 {
+  margin-right: 10px;
+}
+
+.legend .box {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.legend span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
 
 /*
 

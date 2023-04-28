@@ -1,10 +1,10 @@
 //Imports prediction data
 // import nHood from '../data/Neighborhoods_Philadelphia.geojson';
-import { pred_bg } from "../data/prediction_blockgroup.js";
-import { pred_nhoods } from "../data/prediction_nhoods.js";
+// import { pred_bg } from "../data/prediction_blockgroup.js";
+// import { pred_nhoods } from "../data/prediction_nhoods.js";
 
-console.log(pred_bg)
-console.log(pred_nhoods)
+// console.log(pred_bg)
+// console.log(pred_nhoods)
 
 //Imports from other modules
 // import { initMap } from "./map.js";
@@ -98,3 +98,4 @@ window.key = key;
 window.addressInput = addressInput;
 window.app = app;
 window.map = map;
+
