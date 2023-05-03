@@ -9,6 +9,7 @@ In 2022, there were 1.2 million structure fires in the country. Last year major 
 As  it stands, the PFD has very limited knowledge about what happens after their job is complete. There is no  programmed set of economic development interventions that are used by public agencies in Philadelphia as a response to fire. The PFD expressed their desire to better understand and predict consequences of a fire so that they can better understand recovery patterns.  
 
 **Application Instructions:**
+	
 	1. Enter a residential address and select a fire severtiy level to view the probability of a vacancy, repair, or sale to happen on that property within two years.
 
 	2. For a spatial summary, first select a geography of scope: neighborhood or block groups.
