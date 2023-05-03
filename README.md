@@ -1,5 +1,7 @@
 # MUSA509_Final
 
+Link to site: https://myronbanez.github.io/MUSA509_Final/site/index.html
+
 	1. Create the dataset for each of the three zoom levels
 	2. Run gc script docker to get those geojsons into the cloud
 	3. Run cloud script that allows for public access urls
