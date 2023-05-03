@@ -10,10 +10,10 @@ As  it stands, the PFD has very limited knowledge about what happens after their
 
 **Application Instructions:**
 	
-	1. Enter a residential address and select a fire severtiy level to view the probability of a vacancy, repair, or sale to happen on that property within two years.
+1. Enter a residential address and select a fire severtiy level to view the probability of a vacancy, repair, or sale to happen on that property within two years.
 
-	2. For a spatial summary, first select a geography of scope: neighborhood or block groups.
+2. For a spatial summary, first select a geography of scope: neighborhood or block groups.
 
-	3. Next, choose an outcome at a specific fire severity level.
+3. Next, choose an outcome at a specific fire severity level.
 
-	4. Click on the polygon to receive the name of the geography and the probability.
+4. Click on the polygon to receive the name of the geography and the probability.
