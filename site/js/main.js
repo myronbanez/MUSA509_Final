@@ -22,6 +22,19 @@ let markers = L.layerGroup().addTo(map);
 let key = [];
 let currentAddressData = [];
 
+// const points = L.vectorGrid.protobuf("https://storage.googleapis.com/fire_recovery_data_lake/tiles/{z}/{x}/{y}.pbf", {
+//     maxZoom: 18,
+//     minZoom: 16,
+//     vectorTileLayerStyles: { //vectorTileStyling,
+//         prediction_address: {
+//             weight: 0,
+//             fillColor: '#9bc2c4',
+//             fillOpacity: 1,
+//             fill: true
+//         }
+//     }
+// }).addTo(map);
+
 //Load Data
 function onInventoryLoadSuccess(data) {
     key = data;
@@ -98,4 +111,4 @@ window.key = key;
 window.addressInput = addressInput;
 window.app = app;
 window.map = map;
-
+//window.points = points;

@@ -3,30 +3,96 @@ import pred_bg from "../data/prediction_blockgroup.js";
   
 //https://api.mapbox.com/styles/v1/keelbn/cl8c2nvmq003114li896sf85z/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2VlbGJuIiwiYSI6ImNqaWVseGZjZzA3emMzdnAxM296OTFjNG8ifQ.W2j9Y2mz4t6vGRyKJk_Nyw
 
+const colors = ["#F1C82B", "#E19825", "#D55816", "#7B230B"];
+
+function styleBy(field){
+  if (field < 0.05) {
+    return ({ 
+    radius: 5,
+    fill: true,
+    color: colors[0],
+    fillOpacity: 1,
+    opacity: 1,
+    });
+  } else if (field  >= 0.05 && field < 0.11) {
+    return ({ 
+      radius: 5,
+      fill: true,
+      color: colors[1],
+      fillOpacity: 1,
+      opacity: 1,
+    }); 
+  } else if (field  >= 0.11) {
+    return ({ 
+      radius: 5,
+      fill: true,
+      color: colors[2],
+      fillOpacity: 1,
+      opacity: 1,
+    }); 
+  } else {
+    return ({ 
+      radius: 5,
+      fill: true,
+      color: colors[3],
+      fillOpacity: 1,
+      opacity: 1,
+      });
+  }
+};
+
 function initMap() {
     //Making base tile layer
-    const map = L.map('map', {maxZoom:22}).setView([39.95, -75.15], 11);
+    const map = L.map('map', {maxZoom:18}).setView([39.95, -75.15], 11);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
+        maxZoom: 18,
+        minZoom: 11,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    // // Address
-    // L.vectorGrid.protobuf("https://storage.googleapis.com/fire_recovery_data_lake/tiles/{z}/{x}/{y}.pbf", {
-    //     vectorTileLayerStyles: {
-    //         test01: {
-    //             weight:0,
-    //             fillColor: '#7B230B',
-    //             fillOpacity: 0.5,
-    //             fill: false,
-    //             radius: 0.1
-    //         }
-    //     }
-    // }).addTo(map);
+    var vectorTileStyling = {
+        
+      prediction_address: (properties, zoom) => { 
+          
+        let spread1_vacant = properties.spread1_vacant;
+        return styleBy(spread1_vacant);
+        // var current_value = properties.current_assessed_value;
+        // var tax_year_value = properties.tax_year_assessed_value;
+        // var perc_change = ((current_value-tax_year_value)/tax_year_value)*100;
+        // var dollar_change = current_value-tax_year_value;
+        // if (display==1){
+        //   return styleBy(current_value);
+        // } else if (display==2){
+        //   return styleBy(tax_year_value);
+        // } else if (display==3) {
+        //   return styleBy(perc_change);
+        // } else if (display==4) {
+        //   return styleBy(dollar_change);
+        // } else {
+        //   return ({ 
+        //     fill: true,
+        //     weight: 1,
+        //     fillColor: colors[0],
+        //     color: colors[0],
+        //     fillOpacity: 0.8,
+        //     opacity: 1,
+        //     });
+        // }
+        
+        
+      }
+    };
+
+    // Address
+    const points = L.vectorGrid.protobuf("https://storage.googleapis.com/fire_recovery_data_lake/tiles/{z}/{x}/{y}.pbf", {
+        maxZoom: 18,
+        minZoom: 16,
+        vectorTileLayerStyles: vectorTileStyling 
+    }).addTo(map);
 
     return map;
-}
+};
 
 /* NEIGHBORHOOD LEVEL */
 const nhoodCheckbox = document.querySelector('.nhood-checkbox');
