@@ -17,6 +17,6 @@ gcloud beta run jobs execute generate-property-map-tiles --region us-central1
 
 gcloud auth activate-service-account [ACCOUNT] --key-file=KEY_FILE [--password-file=PASSWORD_FILE     | --prompt-for-password] [GCLOUD_WIDE_FLAG …]
 
-gcloud auth activate-service-account tilebuilder01-454@sublime-etching-383905.iam.gserviceaccount.com --key-file=./keys/sublime-etching-383905-9cfa53e9b8e7.json --project=sublime-etching-383905
+gcloud auth activate-service-account tilebuilder01-454@sublime-etching-383905.iam.gserviceaccount.com --key-file=./keys/sublime-etching-383905-127d58684d3e.json --project=sublime-etching-383905
 
 gcloud storage buckets update gs://fire_recovery_data_lake --cors-file=./corsConfig.json
